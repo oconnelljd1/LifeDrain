@@ -26,6 +26,8 @@ public class AppController : MonoBehaviour
 
     public void Start()
     {
+        Screen.sleepTimeout  = SleepTimeout.NeverSleep;
+        // Screen.orientation = ScreenOrientation.Portrait;
         Init();
         PostInit();
 

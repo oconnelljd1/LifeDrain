@@ -43,15 +43,15 @@ public class Player : MonoBehaviour
             _toggles[o].Init(this, o);
         }
 
-        _scrollBar.numberOfSteps = _lifeTrackerParent.childCount;
-        _scrollBar.value = 1f;
-
         _settings.gameObject.SetActive(false);
     }
 
     public void PostInit()
     {
         _toggles[playerIndex].SetIsOn(true);
+
+        _scrollBar.numberOfSteps = _lifeTrackerParent.childCount;
+        _scrollBar.value = 1f;
     }
 
     public void Reset()

@@ -20,9 +20,9 @@ public class LifeTracker : Tracker
 
         base._display.color = Color.white;
 
-        if(base.trackedVal == 0)
+        if(base.trackedVal <= 0)
         {
-            base._subtractButton.SetActive(false);
+            // base._subtractButton.SetActive(false);
             base._display.color = Color.red;
         }
 

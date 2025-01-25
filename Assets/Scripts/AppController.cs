@@ -26,9 +26,15 @@ public class AppController : MonoBehaviour
 
     public void Start()
     {
-        Init();
-        PostInit();
+        Application.targetFrameRate = 30;
+        StartCoroutine("Startup");
+    }
 
+    private IEnumerator Startup()
+    {
+        Init();
+        yield return null;
+        PostInit();
         Reset();
     }
 
